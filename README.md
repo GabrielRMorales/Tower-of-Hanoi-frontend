@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+/* elements:
+3 divs that are the weights
+3 divs that are the "rods"
+	on click that moves the weights to the rod with an animation (animations can be turned on or off)-will check if the rod is in "clickable" state
+a main element that keeps track of what weights are on what rods via state
+using state it will ensure that only certain rods are "clickable"
+
+CSS, including animations, will play a big role
+*/
+
 ## Available Scripts
 
 In the project directory, you can run:

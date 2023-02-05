@@ -1,0 +1,25 @@
+#weight-sm {
+    height: 20px;
+    width: 50px;
+    background-color: green;
+}
+
+#weight-md {
+    height: 20px;
+    width: 100px;
+    background-color: yellow;
+}
+
+#weight-lg {
+    height: 20px;
+    width: 150px;
+    background-color: red;
+}
+
+.tower {
+    height: 200px;
+    width: 50px;
+    background-color: white;
+    display: inline-block;
+    margin: 0 100px;
+}

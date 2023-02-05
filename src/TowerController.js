@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import TowerContainer from "./TowerContainer";
-
-//import weights/rod as needed
+import Tower from "Tower";
+import Weight from "Weight";
+import "./TowerController.css";
 
 class TowerController extends Component {
     /*only one weight or one rod is clickable at any time-this is what changes with one click
@@ -21,9 +21,14 @@ class TowerController extends Component {
 
     render(){
         //include the onclick functions as props
-        return (<TowerContainer />)
+        return (<div>
+            <Tower />
+            <Tower />
+            <Tower />
+        </div>)
     }
 
 }
 
 export default TowerController;
+
