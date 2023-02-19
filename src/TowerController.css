@@ -1,4 +1,4 @@
-#size-sm {
+#a {
     height: 20px;
     width: 50px;
     background-color: green;
@@ -7,7 +7,7 @@
     left: 375px;
 }
 
-#size-md {
+#b {
     height: 20px;
     width: 100px;
     background-color: yellow;
@@ -16,7 +16,7 @@
     left: 375px;
 }
 
-#size-lg {
+#c {
     height: 20px;
     width: 150px;
     background-color: red;
