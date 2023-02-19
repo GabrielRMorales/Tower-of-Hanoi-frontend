@@ -1,25 +1,39 @@
-#weight-sm {
+#size-sm {
     height: 20px;
     width: 50px;
     background-color: green;
+    position: absolute;
+    top: 450px;
+    left: 375px;
 }
 
-#weight-md {
+#size-md {
     height: 20px;
     width: 100px;
     background-color: yellow;
+    position: absolute;
+    top: 470px;
+    left: 375px;
 }
 
-#weight-lg {
+#size-lg {
     height: 20px;
     width: 150px;
     background-color: red;
+    position: absolute;
+    top: 490px;
+    left: 375px;
+}
+
+#towers {
+    margin-top: 20%;
+    text-align: center;
 }
 
 .tower {
     height: 200px;
     width: 50px;
-    background-color: white;
+    background-color: black;
     display: inline-block;
     margin: 0 100px;
 }

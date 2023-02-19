@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import Tower from "Tower";
-import Weight from "Weight";
+import Tower from "./Tower";
+import Weight from "./Weight";
 import "./TowerController.css";
 
 class TowerController extends Component {
@@ -21,7 +21,11 @@ class TowerController extends Component {
 
     render(){
         //include the onclick functions as props
-        return (<div>
+        return (<div id="towers">
+            <h1>Towers of Hanoi</h1>
+            <Weight size="sm" />
+            <Weight size="md" />
+            <Weight size="lg" />
             <Tower />
             <Tower />
             <Tower />
