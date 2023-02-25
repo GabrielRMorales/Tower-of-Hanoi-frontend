@@ -24,7 +24,12 @@ class TowerController extends Component {
 
                 {discArray: [],
                 clickable: false}
-            ]
+            ],
+            weightClasses: {
+                a: "top one",
+                b: "middle one",
+                c: "bottom one"
+            }
             
         }
         this.discClick=this.discClick.bind(this);
@@ -110,24 +115,25 @@ class TowerController extends Component {
             //position of each weight
             
             //use newTowers
-            const weightState = {a: [], b: [], c: []};
+            const weightState = {a: "", b: "", c: ""};
+            const orders = ["one","two","three"];
             newTowers.forEach((element,i) => {
                 let el = element.discArray;
                 if (el.length == 1){
-                    weightState[el[0]].push(`bottom ${i}`);
+                    weightState[el[0]] = `bottom ${orders[i]}`;
                 } else if (el.length == 2) {
-                    weightState[el[0]].push(`middle ${i}`);
-                    weightState[el[1]].push(`bottom ${i}`);
+                    weightState[el[0]] = `middle ${orders[i]}`;
+                    weightState[el[1]] = `bottom ${orders[i]}`;
 
                 } else if (el.length == 3) {
-                    weightState[el[0]].push(`top ${i}`);
-                    weightState[el[1]].push(`middle ${i}`);
-                    weightState[el[2]].push(`bottom ${i}`);
+                    weightState[el[0]] = `top ${orders[i]}`;
+                    weightState[el[1]] = `middle ${orders[i]}`;
+                    weightState[el[2]] = `bottom ${orders[i]}`;
                 }
                 
             });
            console.log(weightState);
-           this.setState({selectedDisc: "none", towers: newTowers}, ()=>{console.log(this.state)});
+           this.setState({selectedDisc: "none", towers: newTowers, weightClasses: weightState}, ()=>{console.log(this.state)});
 
         }
         //if first disc in discArray is bigger, add selectedDisc to array as first one and remove selected Disc from previous array
@@ -139,9 +145,9 @@ class TowerController extends Component {
         //you could also possibly pass in the size to the onclick then use this within discClick
         return (<div id="towers">
             <h1>Towers of Hanoi</h1>
-            <Weight size="a" className="top one" onClick={this.discClick} />
-            <Weight size="b" className="middle one" onClick={this.discClick} />
-            <Weight size="c" className="bottom one" onClick={this.discClick} />
+            <Weight size="a" className={`weight ${this.state.weightClasses["a"]}`} onClick={this.discClick} />
+            <Weight size="b" className={`weight ${this.state.weightClasses["b"]}`} onClick={this.discClick} />
+            <Weight size="c" className={`weight ${this.state.weightClasses["c"]}`} onClick={this.discClick} />
             <Tower order="0" onClick={this.towerClick} />
             <Tower order="1" onClick={this.towerClick} />
             <Tower order="2" onClick={this.towerClick} />
