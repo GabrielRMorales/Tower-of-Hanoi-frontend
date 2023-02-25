@@ -3,16 +3,16 @@
     width: 50px;
     background-color: green;
     position: absolute;
-    top: 450px;
     left: 375px;
 }
+
+
 
 #b {
     height: 20px;
     width: 100px;
     background-color: yellow;
     position: absolute;
-    top: 470px;
     left: 375px;
 }
 
@@ -21,8 +21,29 @@
     width: 150px;
     background-color: red;
     position: absolute;
-    top: 490px;
     left: 375px;
+}
+
+.top {
+    top: 450px;
+}
+
+.middle {
+    top: 470px;
+}
+
+.bottom {
+    top: 490px;
+}
+
+.one {
+    left: 375px;
+}
+.two {
+    left: 425px;
+}
+.three {
+    left: 500px;
 }
 
 #towers {
