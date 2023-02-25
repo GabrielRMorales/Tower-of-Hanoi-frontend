@@ -1,54 +1,59 @@
 #a {
-    height: 20px;
-    width: 50px;
+    width: 100px;
     background-color: green;
-    position: absolute;
+    
 }
 
 #b {
-    height: 20px;
-    width: 100px;
+    width: 150px;
     background-color: yellow;
-    position: absolute;
 }
 
 #c {
-    height: 20px;
-    width: 150px;
+    width: 200px;
     background-color: red;
+}
+.weight {
+    height: 35px;
+    margin-bottom: 5px;
     position: absolute;
+    border-radius: 10%;
 }
 
 .top {
-    top: 65%;
+    top: 61%;
 }
 
 .middle {
-    top: 70%;
+    top: 67%;
 }
 
 .bottom {
-    top: 75%;
+    top: 73%;
 }
 
 .one {
-    left: 31%;
+    left: 28.5%;
 }
 .two {
-    left: 48.5%;
+    left: 47.5%;
 }
 .three {
-    left: 65.9%;
+    left: 66.7%;
+}
+
+div.selectable-tower, .selected-weight {
+    outline: 2px blue solid;
 }
 
 #towers {
-    margin-top: 20%;
+    margin-top: 10%;
     text-align: center;
 }
 
 .tower {
-    height: 200px;
-    width: 50px;
+    height: 350px;
+    width: 75px;
     background-color: black;
     display: inline-block;
     margin: 0 100px;

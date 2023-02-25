@@ -145,12 +145,12 @@ class TowerController extends Component {
         //you could also possibly pass in the size to the onclick then use this within discClick
         return (<div id="towers">
             <h1>Towers of Hanoi</h1>
-            <Weight size="a" className={`weight ${this.state.weightClasses["a"]}`} onClick={this.discClick} />
-            <Weight size="b" className={`weight ${this.state.weightClasses["b"]}`} onClick={this.discClick} />
-            <Weight size="c" className={`weight ${this.state.weightClasses["c"]}`} onClick={this.discClick} />
-            <Tower order="0" onClick={this.towerClick} />
-            <Tower order="1" onClick={this.towerClick} />
-            <Tower order="2" onClick={this.towerClick} />
+            <Weight size="a" className={`${this.state.selectedDisc == "a" ? "selected-weight" : "" } weight ${this.state.weightClasses["a"]}`} onClick={this.discClick} />
+            <Weight size="b" className={`${this.state.selectedDisc == "b" ? "selected-weight" : "" } weight ${this.state.weightClasses["b"]}`} onClick={this.discClick} />
+            <Weight size="c" className={`${this.state.selectedDisc == "c" ? "selected-weight" : "" } weight ${this.state.weightClasses["c"]}`} onClick={this.discClick} />
+            <Tower order="0" className={this.state.towers[0].clickable ? "selectable-tower" : ""} onClick={this.towerClick} />
+            <Tower order="1" className={this.state.towers[1].clickable ? "selectable-tower" : ""} onClick={this.towerClick} />
+            <Tower order="2" className={this.state.towers[2].clickable ? "selectable-tower" : ""} onClick={this.towerClick} />
         </div>)
     }
 
